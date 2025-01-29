@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pdf Category</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="src/assets/style.css">
+    <link rel="stylesheet" href="src/assets/bootstrap.css">
+    <link rel="stylesheet" href="src/assets/style.css">
+    <script src="src/assets/bootstrap.bundle.js"></script>
+    <script defer type="module"  src="src/assets/booksCategory.js"></script>
+</head>
+<body>
+  
+  <div id="header-placeholder">
+    <script type="module">
+      import {hoverLikn} from './src/assets/function'
+      document.addEventListener('DOMContentLoaded', () => {
+             fetch('index.html')
+                 .then(response => response.text())
+                 .then(data => {
+                     const parser = new DOMParser();
+                     const doc = parser.parseFromString(data, 'text/html');
+                     const header = doc.querySelector('header');
+
+                     const headerLinks=doc.querySelectorAll('.headerLink')
+                     hoverLikn(headerLinks)
+
+                     document.getElementById('header-placeholder').appendChild(header);
+                 })
+                 .catch(error => console.error('Error loading header:', error));
+         });
+   </script>
+  </div>
+
+  <main style="min-height: 60vh;">
+    <div class="container">
+        <div class=" text-uppercase text-center"><h2 id="category-title">category</h2></div>
+        <div id="book-list" class="book-list">
+            <!-- سيتم وضع الكتب هنا -->
+             
+          </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder">
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+             fetch('index.html')
+                 .then(response => response.text())
+                 .then(data => {
+                     const parser = new DOMParser();
+                     const doc = parser.parseFromString(data, 'text/html');
+                     const footer = doc.querySelector('footer');
+                     document.getElementById('footer-placeholder').appendChild(footer);
+                 })
+                 .catch(error => console.error('Error loading footer:', error));
+         });
+   </script>
+  </div>
+</body>
+</html>
