@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us</title>
+    <link href="/src/assets/bootstrap.css" rel="stylesheet">
+    <link href="/src/assets/contactus.css" rel="stylesheet">
+    <link rel="stylesheet" href="/src/assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <script defer src="/src/assets/bootstrap.bundle.js"></script>
+    <script defer type="module" src="/src/assets/contactus.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+
+    <div id="header-placeholder">
+      
+    </div>
+
+    <div class="bg-white min-vh-100 py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="card border-0 shadow-lg">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <div class="h-100">
+                    <img 
+                      src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80&w=1000"
+                      alt="Library"
+                      class="h-100 w-100 object-fit-cover"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-5">
+                    <h2 class="card-title mb-2 fw-bold text-primary">Contact us</h2>
+                    <p class="text-muted mb-4">Have questions about a book or pdf ? We'd love to hear from you!</p>
+                    
+                    <div class="mb-4">
+                      
+                      <div class="d-flex mb-3">
+                        <svg class="text-primary me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <p class="mb-0">+212 6 39 41 59 41</p>
+                      </div>
+                      <div class="d-flex mb-4">
+                        <svg class="text-primary me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <rect width="20" height="16" x="2" y="4" rx="2"/>
+                          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                        </svg>
+                        <p class="mb-0">mohamadjalim05@gmail.com</p>
+                      </div>
+                    </div>
+
+                    <form id="contactForm">
+                      <div class="mb-3">
+                        <input 
+                          type="text" 
+                          class="form-control" 
+                          placeholder="Your Name"
+                          required
+                          id="name"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <input 
+                          type="email" 
+                          class="form-control" 
+                          placeholder="Your Email"
+                          required
+                          id="email"
+                        />
+                      </div>
+                    
+                      <div class="mb-3">
+                        <textarea 
+                          class="form-control" 
+                          rows="4"
+                          placeholder="Your Message"
+                          required
+                          id="message"
+                        ></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary px-4 py-2">
+                        Send Message
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-placeholder">
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+               fetch('index.html')
+                   .then(response => response.text())
+                   .then(data => {
+                       const parser = new DOMParser();
+                       const doc = parser.parseFromString(data, 'text/html');
+                       const footer = doc.querySelector('footer');
+                       document.getElementById('footer-placeholder').appendChild(footer);
+                   })
+                   .catch(error => console.error('Error loading footer:', error));
+           });
+     </script>
+    </div>
+
+    
+  </body>
+</html>
