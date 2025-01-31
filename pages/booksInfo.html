@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script type="module" crossorigin src="/JMpdf/assets/booksInfo-ZdYPQBpu.js"></script>
+  <link rel="modulepreload" crossorigin href="/JMpdf/assets/function-insZNpSi.js">
+  <link rel="modulepreload" crossorigin href="/JMpdf/assets/index-DoEC0PdN.js">
+  <link rel="stylesheet" crossorigin href="/JMpdf/assets/function-tK7EUtyc.css">
+  <link rel="stylesheet" crossorigin href="/JMpdf/assets/booksInfo-Cc0rNp5Y.css">
+  <link rel="stylesheet" crossorigin href="/JMpdf/assets/style-BlLgqQZ2.css">
+</head>
+<body>
+  
+  <div id="header-placeholder">
+  </div>
+
+  <main style="min-height: 60vh;">
+    <div class="container m-0 row justify-content-center justify-content-md-between align-items-md-center my-2">
+        
+        <div id="book-img" class="book-img  col-12 col-md-3">
+            
+        </div>
+        <div class="info col-12 col-md-8 m-2" id="info">
+            <div class=" text-uppercase text-center text-md-end"><h2 id="book-title">book</h2></div>
+            <div class="disc" id="disc"></div>
+            <div class="download text-center text-md-end" id="download"></div>
+        </div>
+        
+    </div>
+  </main>
+
+  <div id="footer-placeholder">
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+             fetch('../index.html')
+                 .then(response => response.text())
+                 .then(data => {
+                     const parser = new DOMParser();
+                     const doc = parser.parseFromString(data, 'text/html');
+                     const footer = doc.querySelector('footer');
+                     document.getElementById('footer-placeholder').appendChild(footer);
+                 })
+                 .catch(error => console.error('Error loading footer:', error));
+         });
+   </script>
+  </div>
+</body>
+</html>
