@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script type="module" crossorigin src="/JMpdf/assets/admin-D34NzYqV.js"></script>
+  <link rel="modulepreload" crossorigin href="/JMpdf/assets/function-Bz4W5OcZ.js">
+  <link rel="modulepreload" crossorigin href="/JMpdf/assets/index-DoEC0PdN.js">
+  <link rel="stylesheet" crossorigin href="/JMpdf/assets/function-tK7EUtyc.css">
+  <link rel="stylesheet" crossorigin href="/JMpdf/assets/admin-B3oYeZAj.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+                </svg>
+                <span><a href="index.html" class="nav-link">JMpdf</a></span>
+            </div>
+            <nav>
+                <a href="#" class="sidebar-a active " role="addBookSection">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-journal-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5"/>
+                        <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                        <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                    </svg>
+                    <span>Add PDF</span>
+                </a>
+                <a href="#" class="sidebar-a" role="removeBookSection">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-journal-minus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M5.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5"/>
+                        <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                        <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                      </svg>
+                    <span>Remove PDF</span>
+                </a>
+                <a href="#" class="sidebar-a" role="addCategorySection">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bookmark-plus" viewBox="0 0 16 16">
+                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                        <path d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4"/>
+                    </svg>
+                    <span>Add Category</span>
+                </a>
+                <a href="#" class="sidebar-a" role="removeCategorySection">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bookmark-dash" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M5.5 6.5A.5.5 0 0 1 6 6h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5"/>
+                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                    </svg>
+                    <span>Remove Category</span>
+                </a>
+                <a href="#" class="sidebar-a" role="messagesSection" style="display: none;" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-left-text" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+                      </svg>
+                    <span>User messages</span>
+                </a>
+            </nav>
+        </div>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+              <!-- ---------------------------add Book section--------------------------- -->
+            <section class="adminSection" id="addBookSection" style="display: block;">
+                <div class="title mb-2">
+                    <span class="fw-bold fs-2">Add PDF</span>
+                </div>
+  
+                <form  id="add-book-form" class="row p-3 gap-3">
+                    <input type="text" id="title" name="title" class="form-control col-12" placeholder="Title" required>
+                    <textarea id="description" name="description" class="form-control col-12" placeholder="Description"></textarea>
+                    
+                        
+                    <select  class="form-select" id="select-category" aria-label="Default select example">
+                        <option selected>book without category</option>
+                    </select>
+                    
+  
+                      <!-- <input type="url" id="img-link" name="img-link" class="form-control col-12" placeholder="Img Link"> -->
+                       <div class="imgContainer  col-12 p-0">
+                            <label for="img-link" class=""> Chose img for the cover:</label>
+                            <input type="file" name="img-link" id="img-link" class="form-control " title="chose img for the cover">
+                       </div>
+  
+                      <!-- <input type="url" id="download-link" name="download-link" class="form-control col-12" placeholder="Download Link" required> -->
+                      <div class="downloadContainer  col-12 p-0">
+                        <label for="download-link" class=""> chose you PDF:</label>
+                        <input type="file" name="download-link" id="download-link" class="form-control ">
+                      </div>
+  
+                      <button type="submit" class="btn btn-primary">Add PDF</button>
+                  </form>
+  
+            </section>
+  
+            <!-- ------------------------------remove Book section ------------------------ -->
+            <section class="adminSection" id="removeBookSection" style="display: none;">
+                <div class="title mb-2">
+                    <span class="fw-bold fs-2">Remove PDF</span>
+                </div>
+                
+                <form id="remove-book-form" class="row p-3 gap-3">
+                    <input type="text" id="remove-title" name="remove-title" class="form-control col-12" placeholder="Title of the book to remove" required>
+                    <button type="submit" class="btn btn-danger">Remove PDF</button>
+                </form>
+            </section>
+
+            <!-- ---------------------------add category--------------------- -->
+            <section class="adminSection" id="addCategorySection" style="display: none;">
+                <div class="title mb-2">
+                    <span class="fw-bold fs-2">Add category</span>
+                </div>
+                
+                <form id="add-category-form" class="row p-3 gap-3">
+                    <input type="text" id="category-name" name="category-title" class="form-control col-12" placeholder="Title of the category" required>
+                    <button type="submit" class="btn btn-primary">Add category</button>
+                </form>
+            </section>
+
+            <!-- --------------------------------remove category------------------------ -->
+            <section class="adminSection" id="removeCategorySection" style="display: none;">
+                <div class="title mb-2">
+                    <span class="fw-bold fs-2">Remove category</span>
+                </div>
+                
+                <form id="remove-category-form" class="row p-3 gap-3">
+                    <input type="text" id="category-remove-name" name="category-remove-name" class="form-control col-12" placeholder="Title of the category" required>
+                    <button type="submit" class="btn btn-danger">Remove category</button>
+                </form>
+            </section>
+
+
+            <!-- ----------------------------message section---------------------------- -->
+            <section class="message-section adminSection " id="messagesSection" style="display: none;">
+                <header class="content-header">
+                    <h1>Customer Messages</h1>
+                    <div class="header-actions">
+                        <div class="search-box">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"/>
+                                <path d="m21 21-4.3-4.3"/>
+                            </svg>
+                            <input type="text" placeholder="Search messages..." id="searchInput">
+                        </div>
+                    </div>
+                </header>
+    
+                <!-- Filters -->
+                <div class="filters mb-4">
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="filter" id="all" checked>
+                        <label class="btn btn-outline-primary" for="all">All Messages</label>
+    
+                        <input type="radio" class="btn-check" name="filter" id="unread">
+                        <label class="btn btn-outline-primary" for="unread">Unread</label>
+    
+                        
+                    </div>
+                </div>
+    
+                <!-- Messages List -->
+                <div class="messages-container">
+                    <div class="message-list">
+                        <!-- Message items will be dynamically added here -->
+                    </div>
+    
+                    <!-- Message Detail View -->
+                    <div class="message-detail  " id="messageDetail">
+                        <div class="detail-header">
+                            <h3>Message Details</h3>
+                            <button class="btn-close" id="closeDetail"></button>
+                        </div>
+                        <div class="detail-content">
+                            <!-- Message details will be dynamically added here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   
+</body>
+</html>
