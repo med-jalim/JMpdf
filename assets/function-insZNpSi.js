@@ -3,7 +3,7 @@
                   `,s.classList.remove("book-list");return}else s.classList.add("book-list")}else{if(a.length===0){const s=document.querySelector(t);s.innerHTML=`
                       <div class='alert alert-info m-0' >no ${e} here</div>
                   `}return a}}function u(o){const i=document.getElementById("book-list");i.innerHTML="",o.forEach(e=>{const l=document.createElement("div");l.classList.add("book-item","bg-light","mb-2"),l.innerHTML=`
-      <a class="nav-link" href='../pages/booksInfo.html?title=${encodeURIComponent(e.title)}'>
+      <a class="nav-link" href='/JMpdf/pages/booksInfo.html?title=${encodeURIComponent(e.title)}'>
             <div class="book-img"><img src="${e.img}" alt=""></div>
             <div class="book-info">
             <h6>${e.title}</h6>
