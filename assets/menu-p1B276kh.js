@@ -1,0 +1,5 @@
+import{l as a}from"./function-insZNpSi.js";/* empty css              */import{c as s}from"./index-BHRf0dvD.js";const c="https://zwaptvdanmpkvskqdwtl.supabase.co",r="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp3YXB0dmRhbm1wa3Zza3Fkd3RsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzcwNDAwMzgsImV4cCI6MjA1MjYxNjAzOH0.yQvNbikw_J5NW4oMdfkK9YM-Uoeiu8nHCU_R4ClW0FI",i=s(c,r);async function d(){if(document.getElementById("categorys-list")){const{data:t,error:e}=await i.from("category").select("*");if(e){console.error("Error fetching category:",e);return}m(t)}}function m(n){const t=document.getElementById("categorys-list");t.innerHTML="",n.forEach(e=>{if(e.id===0)return;const o=document.createElement("div");o.classList.add("categorys-item","bg-primary","mb-2","p-2","rounded-3"),o.innerHTML=`
+        <div class="category-info text-center text-uppercase text-white   ">
+          <h5><a class="nav-link" href='booksCategory.html?category=${encodeURIComponent(e.name)}'>${e.name}</a></h5>
+        </div>
+      `,t.appendChild(o)})}document.addEventListener("DOMContentLoaded",()=>{a(),d()});
