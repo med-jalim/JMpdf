@@ -1,1 +1,6 @@
 .categorys-list{column-count:2!important;column-gap:1vh!important;direction:rtl}@media (min-width:600px){.categorys-list{column-count:6!important;column-gap:1vh!important}}@media (min-width:900px){.categorys-list{column-count:8!important;column-gap:1vh!important}}
+
+
+.categorys-item{
+  break-inside: avoid !important;
+}
